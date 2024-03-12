@@ -54,7 +54,6 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: ${{ matrix.java }}
-        distribution: zulu
     - name: Build
       run: |
         sudo apt update && sudo apt install -y ant

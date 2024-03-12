@@ -19,6 +19,7 @@ on:
       - 10.1.x
       - 9.0.x
       - 8.5.x
+      - s390x-GA
   pull_request:
     branches:
       - main

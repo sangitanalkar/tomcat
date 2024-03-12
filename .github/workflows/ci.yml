@@ -54,7 +54,7 @@ jobs:
       uses: actions/setup-java@v4
       with:
         java-version: ${{ matrix.java }}
-        distribution: zulu
+        distribution: semeru
     - name: Build
       run: |
         sudo apt update && sudo apt install -y ant

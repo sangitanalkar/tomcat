@@ -35,7 +35,7 @@ jobs:
         isMain:
           - ${{ contains(github.ref, 'main') }}
         java: [ 17, 20, 21 ]
-        os: [ self-hosted ]
+        os: [ ubuntu-latest, windows-latest, self-hosted ]
         exclude:
           - isMain: true
             java: 17
@@ -54,7 +54,7 @@ jobs:
       uses: actions/setup-java@v4
       with:
         java-version: ${{ matrix.java }}
-        distribution: semeru
+        distribution: temurin
     - name: Build
       run: |
         sudo apt update && sudo apt install -y ant
